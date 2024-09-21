@@ -1,0 +1,173 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px; /* Ajusta este valor según la altura del header */
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    align-items: center;
+    background:linear-gradient(to right, #66c8e4, #343d8d);
+    color: white;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header a la parte superior */
+    left: 0; /* Alinea el header a la izquierda */
+    right: 0; /* Alinea el header a la derecha */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+h2{
+    font-family: 'Roboto', sans-serif; /* Cambia a la fuente que desees */
+}
+
+.logo {
+    margin-right: 0; /* Elimina el margen derecho */
+}
+
+.logo img {
+    width: 400px; /* Ajusta el ancho al 30% del original */
+    height: auto; /* Mantiene la proporción */
+    max-height: 349px; /* Ajusta la altura máxima */
+    padding-right: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del nav */
+    font-family: 'Roboto', sans-serif; /* Cambia a la fuente que desees */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+    margin: 0; /* Elimina margen para que esté pegado al logo */
+    padding: 0; /* Elimina padding para que esté pegado al logo */
+    font-size: 18px; /* Cambia el tamaño según tus preferencias */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: block; /* Asegúrate de que esté visible */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    margin-left: 10px; /* Agrega un poco de espacio a la izquierda del menú hamburguesa */
+}
+
+/* Hero section */
+.hero {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Ocupa el ancho completo */
+    margin-bottom: 20px; /* Espacio entre el título y las tarjetas */
+    font-size: 2rem; /* Ajusta el tamaño del texto según tus preferencias */
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
