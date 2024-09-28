@@ -10,8 +10,9 @@ body {
     line-height: 1.6;
     padding: 0;
     margin: 0;
-    padding-top: 60px; /* Ajusta este valor según la altura del header */
+    padding-top: 250px; /* Ajusta este valor según la altura del header */
 }
+
 
 /* Estilos del encabezado */
 header {
@@ -105,15 +106,28 @@ nav ul li a {
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    flex: 0 1 calc(33.33% - 20px); /* Tomar un 33.33% del ancho menos el margen */
     min-width: 250px;
     max-width: 30%;
     text-align: center;
+    position: relative; /* Para posicionar el pop-up dentro del contenedor */
+    display: inline-block;
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.5rem;
+}
+
+.card img {
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .section-title {
@@ -121,6 +135,34 @@ nav ul li a {
     width: 100%; /* Ocupa el ancho completo */
     margin-bottom: 20px; /* Espacio entre el título y las tarjetas */
     font-size: 2rem; /* Ajusta el tamaño del texto según tus preferencias */
+}
+
+.card:hover .info {
+    display: block;
+    opacity: 1;
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Efecto de agrandar ligeramente la imagen */
+}
+
+.info {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 50%; /* Centramos verticalmente */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translate(-50%, -50%); /* Asegura que esté realmente centrado */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    color: #000; /* Texto negro */
+    padding: 20px; /* Espacio interno suficiente */
+    width: 350px; /* Aumentamos el ancho para que los textos quepan en una línea */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    text-align: center;
+    font-size: 1rem; /* Tamaño del texto ligeramente más grande */
 }
 
 /* Pie de página */
@@ -157,7 +199,8 @@ footer {
     }
 
     .card {
-        max-width: 90%;
+        flex: 0 1 calc(50% - 20px); /* Dos tarjetas por fila en tabletas */
+        max-width: calc(50% - 20px);
     }
 }
 
@@ -168,6 +211,11 @@ footer {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .card {
+        flex: 0 1 100%; /* Una tarjeta por fila en móviles */
+        max-width: 100%;
     }
 }
 
