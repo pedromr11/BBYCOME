@@ -25,6 +25,7 @@ header {
     left: 0; /* Alinea el header a la izquierda */
     right: 0; /* Alinea el header a la derecha */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    min-height: 60px; /* Altura mínima del encabezado, ajusta según tus necesidades */
 }
 
 h2{
@@ -36,7 +37,7 @@ h2{
 }
 
 .logo img {
-    width: 400px; /* Ajusta el ancho al 30% del original */
+    width: 300px; /* Ajusta el ancho al 30% del original */
     height: auto; /* Mantiene la proporción */
     max-height: 349px; /* Ajusta la altura máxima */
     padding-right: 20px;
@@ -68,12 +69,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-.hamburger {
-    display: block; /* Asegúrate de que esté visible */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    font-size: 24px; /* Ajusta el tamaño del icono */
-    margin-left: 10px; /* Agrega un poco de espacio a la izquierda del menú hamburguesa */
-}
 
 /* Hero section */
 .hero {
@@ -140,7 +135,7 @@ nav ul li a {
     text-align: center; /* Centra el texto */
     width: 100%; /* Ocupa el ancho completo */
     margin-bottom: 20px; /* Espacio entre el título y las tarjetas */
-    font-size: 2rem; /* Ajusta el tamaño del texto según tus preferencias */
+    font-size: 3rem; /* Ajusta el tamaño del texto según tus preferencias */
 }
 
 .card:hover .info {
@@ -170,6 +165,7 @@ nav ul li a {
     text-align: center;
     font-size: 1rem; /* Tamaño del texto ligeramente más grande */
 }
+
 
 /* Pie de página */
 footer {
